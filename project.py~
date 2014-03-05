@@ -21,7 +21,7 @@ if __name__ == "__main__":
 	d.draw(main_screen)
 	e = button.Button(420, 410, 200, 150)
 	e.draw(main_screen)
-	#f = button.Button (next button)
+	#f = button.Button
 
 	while True:
 		ev = pygame.event.poll()
