@@ -21,3 +21,4 @@ if __name__ =="__main__":
 			if button_rec1.collidepoint(x ,y):
 				print "Pastaaaas"
 		pygame.display.flip()
+	
