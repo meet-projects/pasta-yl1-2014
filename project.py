@@ -17,14 +17,19 @@ def drawpastascreen(main_screen):
 	e = button.Button(420, 410, 200, 150)
 	e.draw(main_screen)
 
+	global ab
 	ab = pastaclasses.Pasta("Fusilli","10","Fusilli.jpg")
 	main_screen.blit(ab.picture, a.rec)
+	global bb
 	bb = pastaclasses.Pasta("Penne","8", "Penne_rigate.jpg")
 	main_screen.blit(bb.picture, b.rec)
+	global cb
 	cb = pastaclasses.Pasta("Farfalle","7","Farfalle.JPG")
 	main_screen.blit(cb.picture, c.rec)
+	global db
 	db = pastaclasses.Pasta("Maccheroni","9","Maccheroni.jpg")
 	main_screen.blit(db.picture, d.rec)
+	global eb
 	eb = pastaclasses.Pasta("Cenneroni","12","cenn.jpg")
 	main_screen.blit(eb.picture, e.rec)
 
@@ -57,14 +62,19 @@ def drawsaucescreen(main_screen):
 
 def drawextrasscreen(main_screen):
 	screen = "Extras"
+	global a
 	a = button.Button(50, 175, 200, 150)
 	a.draw(main_screen)
+	global b
 	b = button.Button(300, 175, 200, 150)
 	b.draw(main_screen)
+	global c
 	c = button.Button(550, 175, 200, 150)
 	c.draw(main_screen)
+	global d
 	d = button.Button(170, 410, 200, 150)
 	d.draw(main_screen)
+	global e
 	e = button.Button(420, 410, 200, 150)
 	e.draw(main_screen)
 	
@@ -105,6 +115,8 @@ if __name__ == "__main__":
 	drawextrasscreen(main_screen)
 
 	order=[]
+	sausess =[]
+	extrass = []
 
 	while True:
 		ev = pygame.event.poll()
@@ -162,18 +174,16 @@ if __name__ == "__main__":
 				else:
 					print "You ordered Tuna"
 					extrass.append(ob.name)
-			if next.rec.collidepoint(x, y):
-				if screen == "Pasta":
-					print "Keep going to Pasta Sauces!"
-			if back.rec.collidepoint(x,y):
-				if screen == "Pasta_sauces":
+			#if next.rec.collidepoint(x, y):
+				#if screen == "Pasta":
+					#print "Keep going to Pasta Sauces!"
+			#if back.rec.collidepoint(x,y):
+			#	if screen == "Pasta_sauces":
 
-					print "Back to Pasta"
+			#		print "Back to Pasta"
 
-
-				sausess =[]
 					
-				elif screen == "Sauces":
+				if screen == "Sauces":
 					print "Keep going to Extras!"
 					next=label.Label(110, 730, 150, 58,"    CHECK OUT  ",(255, 95, 84),56)
 					next.draw(main_screen)
@@ -183,7 +193,7 @@ if __name__ == "__main__":
 
 					pastasauces = label.Label(175, 60, 700, 120, "Pasta  Extras ", (255, 95, 84), 100)
 					pastasauces.draw(main_screen)
-					extrass = []
+					
 					
 					screen = "check"
 				elif screen == "check":
@@ -192,29 +202,29 @@ if __name__ == "__main__":
 					pastasauces = label.Label(2, 60, 700, 120, "You ordered:" , (255, 95, 84),60)
 					pastasauces.draw(main_screen)
 
-					xindex = 0
-					for x in order:
-						xx = label.Label(2+xindex, 180, 700, 120, x , (255, 95, 84),60)
-						xx.draw(main_screen)
-						xindex += 120
-						Wiith = label.Label(2, 300, 700, 120, "With" , (255, 95, 84),60)
-						Wiith.draw(main_screen)
+				    #xindex = 0
+					#for x in order:
+					#	xx = label.Label(2+xindex, 180, 700, 120, x , (255, 95, 84),60)
+					#	xx.draw(main_screen)
+					#	xindex += 120
+					#	Wiith = label.Label(2, 300, 700, 120, "With" , (255, 95, 84),60)
+					#	Wiith.draw(main_screen)
 
-					yindex = 0
-					for y in sausess:
-						yy = label.Label(2+yindex, 420, 700, 120,  y , (255, 95, 84),60)
-						yy.draw(main_screen)
-						yindex+= 240
-						Annd = label.Label(2, 540, 700, 120, "And" , (255, 95, 84),60)
-						Annd.draw(main_screen)
+					#yindex = 0
+					#for y in sausess:
+					#	yy = label.Label(2+yindex, 420, 700, 120,  y , (255, 95, 84),60)
+					#	yy.draw(main_screen)
+					#	yindex+= 240
+					#	Annd = label.Label(2, 540, 700, 120, "And" , (255, 95, 84),60)
+					#	Annd.draw(main_screen)
 
-					uindex = 0
-					for u in extrass:
-						uu = label.Label(2+ uindex, 660, 700, 120,   u , (255, 95, 84),60)
-						uu.draw(main_screen)
-						uindex+= 360
-					next=label.Label(200, 730, 150, 58,"BON APPETIT",(125, 22, 22),56)
-					next.draw(main_screen)
+					#uindex = 0
+					#for u in extrass:
+					#	uu = label.Label(2+ uindex, 660, 700, 120,   u , (255, 95, 84),60)
+					#	uu.draw(main_screen)
+					#	uindex+= 360
+					#next=label.Label(200, 730, 150, 58,"BON APPETIT",(125, 22, 22),56)
+					#next.draw(main_screen)
 
 				
 
