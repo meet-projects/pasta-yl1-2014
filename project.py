@@ -105,6 +105,8 @@ if __name__ == "__main__":
 	drawextrasscreen(main_screen)
 
 	order=[]
+	extrass = []
+	sausess =[]
 
 	while True:
 		ev = pygame.event.poll()
@@ -171,7 +173,7 @@ if __name__ == "__main__":
 					print "Back to Pasta"
 
 
-				sausess =[]
+				
 					
 				elif screen == "Sauces":
 					print "Keep going to Extras!"
@@ -183,7 +185,7 @@ if __name__ == "__main__":
 
 					pastasauces = label.Label(175, 60, 700, 120, "Pasta  Extras ", (255, 95, 84), 100)
 					pastasauces.draw(main_screen)
-					extrass = []
+					
 					
 					screen = "check"
 				elif screen == "check":
