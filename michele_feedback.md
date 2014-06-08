@@ -1,0 +1,12 @@
+Michele's feedback on your group project
+---
+
+Great job finishing your project. I hope you all are proud of what you accomplished, because it was a hard problem that was hard to solve. I have some feedback for you:
+
+* Your project window is too large - you made it 800 by 800, but my computer screen doesn't play it because it is so large. Most computer screens, the maximum you can use is 600 x 600
+* In your `pastaclasses` file, you have 3 classes: `Pasta`, `Pasta_sauces`, and `Extra_for_pasta`. Looking at the code for these classes, they are not different. I can imagine something different about these three classes, but the way you used them, you could have used the same class for all the objects you wanted to create. One thing you could have done with your `Pasta` classes is also add a method called `draw`, which asks for the main_screen and the rectangle. Then you don't have to access the `picture` of the `Pasta` from outside your code.
+* Your `button` class is excellent - it does exactly what you want it to do very well. The only thing I can think of to add to the `button` class is another variable that stores a FUNCTION (yes, in Python you can do weird things like making a function a variable), that you then set in your `main` method that will do the drawing. So you save part of your large `if` statement in the `main` method to just call a single method for example `nextbutton.click()`. Then magic will happen. 
+* Your `label` class is also excellent. I don't even have any comments here =)
+* Your use of `global` variables is slightly wrong - what you should do next time is create all of your objects inside your `main` method - every single object that you want to use in your Python program, you should create inside your `main` method. Then in any of your functions that you create in that file, you will automatically have access to those variables. If you need to CHANGE those variables inside the functions, THEN you can use the `global` keyword to change it before you change it. 
+* Your use of functions is excellent - you use them for drawing screens, which makes your large `if` statement in the main method much cleaner. 
+* Excellent use of the `for` loops at the end of your `if` statement to show the text for everything that you ordered. Great job getting that to work - it won't work perfectly for some cases, but for the majority of average user cases, it will work fantastically. 
